@@ -1,0 +1,52 @@
+https://youtu.be/vV28ilGSJGQ?t=383
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+
+managing session state in express.js: https://github.com/expressjs/session
+
+express.js production best practices for security: http://expressjs.com/en/advanced/best-practice-security.html#dont-use-the-default-session-cookie-name
+
+
+
+GOALS:
+
+Find parallels for these objectives:
+
+Lesson 2: C#, HTML5, and CSS3 (Please read chapters 4 and 5 of your book, plus noted web resources.)
+
+
+Lesson 3: Web Controls (Please read chapter 6 of your book.)
+
+
+
+Lesson 4: Error Handling (Please read chapter 7 of your book.)
+
+node link: https://www.joyent.com/node-js/production/design/errors
+
+express.js link: https://expressjs.com/en/guide/error-handling.html
+
+Lesson 5: JavaScript and JQuery (Please read noted web resources.) 
+
+
+Lesson 6: JSON, ODATA, and Rest (Please read chapter 8 of your book, plus noted web resources.)
+
+you know node.js has modules and to consume and create rest
+
+
+Lesson 7: Client and Server Validation (Please read chapter 9 of your book.)
+
+
+Lesson 8: ASP.NET and MVC 
+
+Lesson 9: ASP.NET and MVC
+
+something to check out for sure: https://elements.heroku.com/buttons/buttercms/nodejs-express-example
+
+
+tutorial: https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
+
+from https://github.com/achowba/node-mysql-crud-app
+
+
+
+this project is use EJS: https://www.npmjs.com/package/ejs
