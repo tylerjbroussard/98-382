@@ -1,16 +1,8 @@
 /* 
 Declare and use variables of primitive data types
 
-
-
-Declare and use arrays
- single-dimensional arrays; multi-dimensional arrays; iteration; initialization; define an
-array; sort and search an array; use push, pop, shift, and unshift methods; use the length
-property; access an array element
-
 Complete and debug code that uses objects
- properties; methods; instantiation; date object; retrieve date and time parts; localize date
-format (MM/DD vs DD/MM); add and subtract dates
+localize date format (MM/DD vs DD/MM); add and subtract dates
 
 Complete and debug code that uses built-in Math functions
  random; round; abs; floor; ceiling; min; max; pow; sqrt
@@ -180,3 +172,31 @@ let stageOne = encodeUserProgress();
 let stageTwo = decodeUserProgress(stageOne);
 console.log(stageOne);
 console.log(stageTwo);
+
+// this is like data hiding w/properties in C#
+
+//object
+var house = {};
+
+//properties
+house.isDoorOpen = false;
+
+//method
+house.openDoor = function () {
+  house.isDoorOpen = true;
+};
+
+class newCar {
+  constructor(model, mpg) {
+    this.model = model;
+    this.mpg = mpg;
+  }
+}
+
+let mazda = new newCar("protege", 45);
+
+console.log(mazda.mpg);
+
+let date = new Date();
+
+console.log(date.getFullYear(), date.getTime());
