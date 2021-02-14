@@ -68,3 +68,115 @@ function Person(first, last, age, eye) {
 var newGuy = new Person(`tyler`, `purple`, 46, `greenish brown`);
 
 console.log(`Hey the new guy is ${newGuy.firstName} and he is ${newGuy.age}`);
+
+/* 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+*/
+
+//unshift
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// expected output: 5
+
+console.log(array1);
+// expected output: Array [4, 5, 1, 2, 3]
+
+//shift
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1);
+// expected output: Array [2, 3]
+
+console.log(firstElement);
+// expected output: 1
+
+var x = array1.pop();
+console.log(x);
+
+//initialization for array using Array constructor
+let fruits = new Array("Orange", "Banana", "Apple");
+
+console.log(fruits.length); // 2
+console.log(fruits[1]); // "Banana"
+
+fruits.sort(); //sort alphabetically
+
+fruits.find((element) => element == "Apple");
+
+fruits.findIndex((element) => element == "Banana");
+
+//decode process
+var hexNumeral =
+  "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var hexAlpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+var result;
+
+//1 creates user string from WeLearn data
+function createUserString() {
+  if (!CmiData)
+    var CmiData = {
+      "cmi.learner_id": "12345",
+      "cmi.learner_name": "USER ACCOUNT",
+    };
+
+  let userLmsId = CmiData["cmi.learner_id"]; //replace with sharepoint call for data
+  let userLmsName = CmiData["cmi.learner_name"]; //replace with sharepoint call for data
+  let completedMod = true; //{make this spservices call to modend data, if date exists then true}
+
+  let unencodedString = `${userLmsId}${userLmsName}${completedMod}`;
+  return unencodedString;
+}
+
+//2 function to convert user string to encoded hex string for transfer
+function converter(userInfo) {
+  let loaded = [];
+  let unloaded = "";
+
+  //unloads string to an array
+  //iteration
+  for (let i = 0; i < userInfo.length; i++) {
+    loaded.push(userInfo.charAt(i));
+  }
+
+  //foreach loop
+  loaded.forEach((index) => {
+    let numIndex = hexNumeral.indexOf(index);
+    unloaded += hexAlpha.charAt(numIndex);
+  });
+  result = unloaded;
+  return result;
+}
+
+//3 main function to call others
+function encodeUserProgress() {
+  let rawString = createUserString();
+  result = converter(rawString);
+  return result;
+}
+
+//4 reverse process to decode user info
+function decodeUserProgress(userProgress) {
+  let loaded = [];
+  let unloaded = "";
+
+  for (var i = 0; i < userProgress.length; i++) {
+    loaded.push(userProgress.charAt(i));
+  }
+
+  loaded.forEach((index) => {
+    let numIndex = hexAlpha.indexOf(index);
+    unloaded += hexNumeral.charAt(numIndex);
+  });
+  result = unloaded;
+  return result;
+}
+
+let stageOne = encodeUserProgress();
+let stageTwo = decodeUserProgress(stageOne);
+console.log(stageOne);
+console.log(stageTwo);
