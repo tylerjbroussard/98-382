@@ -1,6 +1,5 @@
 var openPage = function () {
-  var url =
-    "https:/page.html?";
+  var url = "https:/page.html?";
 
   console.log("url = ", url);
 
@@ -24,3 +23,13 @@ var openPage = function () {
 };
 
 openPage();
+
+var openPageNoId = function () {
+  var url = "https:///index.html";
+
+  console.log("url = ", url);
+
+  window.open(url, ``, `toolbar=no`);
+};
+
+openPageNoId();

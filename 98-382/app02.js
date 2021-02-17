@@ -200,3 +200,19 @@ console.log(mazda.mpg);
 let date = new Date();
 
 console.log(date.getFullYear(), date.getTime());
+
+//break stops the loop
+for (i = 0; i < 10; i++) {
+  if (i === 3) {
+    break;
+  }
+  text += "The number is " + i + "<br>";
+}
+
+//continue skips the action and keeps the loops going
+for (i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text += "The number is " + i + "<br>";
+}
